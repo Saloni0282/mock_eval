@@ -6,7 +6,9 @@ const bookRouter = express.Router();
 bookRouter.get("/get", async (req, res) => {
     try {
         const { genre } = req.query;
-        let filter = {};
+
+        let filter = {}
+        
         if (genre) {
             filter = { genre };
         }
